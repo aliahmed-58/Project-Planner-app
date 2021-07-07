@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/bold"
+        android:layout_marginTop="15dp"
+        android:id="@+id/heading"/>
+
+    <RelativeLayout
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:elevation="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/cardbg"
+        android:id="@+id/dashboardLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projects completed: "
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="15dp"
+            android:id="@+id/projectsCompleted"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@id/projectsCompleted"
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/dashboardProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/progress_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:progress="100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:id="@+id/totalProjects"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboardProgress"
+                app:layout_constraintEnd_toEndOf="@+id/dashboardProgress"
+                app:layout_constraintStart_toStartOf="@+id/dashboardProgress"
+                app:layout_constraintTop_toTopOf="@+id/dashboardProgress"
+                android:text="1/2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/constraintLayout"
+            android:text="Last project added: "
+            android:fontFamily="@font/medium"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/lastProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:text="Create a website "
+            android:fontFamily="@font/regular"
+            android:textSize="20sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/black"
+            android:paddingLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/lastProject">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastProject"
+                android:text="Deadline: "
+                android:fontFamily="@font/medium"
+                android:textSize="21sp"
+                android:textColor="@color/black"
+                android:paddingLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/lastCheckIn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastProject"
+                android:text="Sunday"
+                android:fontFamily="@font/regular"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingLeft="20dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/dark"
+        app:elevation="6dp"
+        app:tint="@color/white"
+        android:clickable="true"
+        app:srcCompat="@drawable/fab" />
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProject">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a project"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="15dp"
+            android:id="@+id/heading"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Project name"
+            android:layout_below="@id/heading"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="15dp"
+            android:id="@+id/edittext1"/>
+
+        <EditText
+            android:id="@+id/projectName"
+            android:layout_width="match_parent"
+            android:layout_below="@id/edittext1"
+            android:layout_marginLeft="20dp"
+            android:background="@color/light"
+            android:padding="7dp"
+            android:fontFamily="@font/regular"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0/30 characters left"
+            android:layout_below="@id/projectName"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:id="@+id/characterProjectName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:layout_below="@id/characterProjectName"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="3dp"
+            android:id="@+id/editText2"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:ems="10"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/regular"
+            android:layout_below="@id/editText2"
+            android:background="@color/light"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0/300 characters left"
+            android:layout_below="@id/description"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:id="@+id/characterDesc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deadline"
+            android:layout_below="@id/characterDesc"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="3dp"
+            android:id="@+id/editText5"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_below="@id/editText5"
+            android:layout_marginLeft="20dp"
+            android:background="@color/light"
+            android:hint="Click to pick a date"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:padding="7dp"
+            android:fontFamily="@font/regular"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="none" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Project link (optional)"
+            android:layout_below="@id/date"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/medium"
+            android:layout_marginTop="3dp"
+            android:id="@+id/editText3"/>
+
+        <EditText
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_below="@id/editText3"
+            android:layout_marginLeft="20dp"
+            android:background="@color/light"
+            android:padding="7dp"
+            android:fontFamily="@font/regular"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/link">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Save"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:background="@drawable/button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:layout_marginBottom="15dp"
+            android:text="Cancel"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:background="@drawable/button"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
